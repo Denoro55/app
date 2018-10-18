@@ -10,18 +10,6 @@ var users = require('./routes/users');
 
 var app = express();
 
-
-
-const mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/test');
-
-const Cat = mongoose.model('Cat', { name: String });
-
-const kitty = new Cat({ name: 'Zildjian' });
-kitty.save();
-
-
-
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 var http = require('http');
